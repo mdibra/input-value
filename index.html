@@ -1,0 +1,34 @@
+<html>
+<head>
+
+</head>
+<body onload="run()">
+    <input  id="input" type="text" value="">
+    <button onclick="run()" id="button" disabled>Click</button>
+    <h2 id="showname"></h2> 
+<script>
+  
+  function run(){
+    var input = document.getElementById('input'),
+      inputValue = document.getElementById('input').value,
+      button = document.getElementById('button');
+  
+    console.log(input.value.length);
+    console.log(button);
+    
+    input.onkeyup = function(){
+
+      if (input.value.length == 0) {
+        button.setAttribute('disabled','disabled');
+      } else {
+        button.removeAttribute('disabled');
+      }
+
+    }  
+    
+    }
+
+</script>
+
+</body>
+</html>
